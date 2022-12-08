@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mark Simonson - Proxima Nova Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+        <array key="Mark Simonson - Proxima Nova.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletAlertVC" customModule="BBUICore" customModuleProvider="target">
+            <connections>
+                <outlet property="alertContainer" destination="4St-m2-hwu" id="Lgy-Qd-5Na"/>
+                <outlet property="btnGap" destination="U4F-tS-YcW" id="MA9-dp-uc0"/>
+                <outlet property="cancelBtn" destination="mwY-gG-HTN" id="DrQ-7B-Piy"/>
+                <outlet property="continueBtn" destination="0aB-p0-COM" id="F3Y-AL-StM"/>
+                <outlet property="descriptionLbl" destination="zMe-Q5-GQi" id="Tqb-Ra-1hx"/>
+                <outlet property="outsideTapBtn" destination="t6s-GU-2nE" id="ZFN-fh-uLH"/>
+                <outlet property="titleLbl" destination="2k5-Ar-4U5" id="3ya-jr-Zwf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6s-GU-2nE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <connections>
+                        <action selector="didTapOutSide" destination="-1" eventType="touchUpInside" id="Aj9-nZ-jfN"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4St-m2-hwu">
+                    <rect key="frame" x="20" y="239" width="335" height="189"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use bbwallet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2k5-Ar-4U5">
+                            <rect key="frame" x="115" y="15" width="105" height="18"/>
+                            <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Applied voucher will be removed if bbwallet is selected as minimum payable amount is Rs 1300. Do you want to continue?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMe-Q5-GQi">
+                            <rect key="frame" x="20" y="48" width="295" height="42"/>
+                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQI-cn-6t0">
+                            <rect key="frame" x="48" y="120" width="239" height="39"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aB-p0-COM">
+                                    <rect key="frame" x="125" y="0.0" width="114" height="39"/>
+                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                    <state key="normal" title="    CONTINUE    ">
+                                        <color key="titleColor" systemColor="darkTextColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="continueAction" destination="-1" eventType="touchUpInside" id="gYe-AZ-QWH"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwY-gG-HTN">
+                                    <rect key="frame" x="0.0" y="0.0" width="95" height="39"/>
+                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="16"/>
+                                    <state key="normal" title="    CANCEL    ">
+                                        <color key="titleColor" systemColor="darkTextColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelAction" destination="-1" eventType="touchUpInside" id="hMv-JD-DSy"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="0aB-p0-COM" firstAttribute="top" secondItem="hQI-cn-6t0" secondAttribute="top" id="3UV-rY-0Mq"/>
+                                <constraint firstItem="mwY-gG-HTN" firstAttribute="leading" secondItem="hQI-cn-6t0" secondAttribute="leading" id="6R3-4E-GUF"/>
+                                <constraint firstItem="0aB-p0-COM" firstAttribute="leading" secondItem="mwY-gG-HTN" secondAttribute="trailing" constant="30" id="U4F-tS-YcW"/>
+                                <constraint firstAttribute="height" constant="39" id="fWY-pf-vfy"/>
+                                <constraint firstAttribute="bottom" secondItem="0aB-p0-COM" secondAttribute="bottom" id="jCo-vI-rXd"/>
+                                <constraint firstAttribute="trailing" secondItem="0aB-p0-COM" secondAttribute="trailing" id="q0Z-Oh-ASc"/>
+                                <constraint firstAttribute="bottom" secondItem="mwY-gG-HTN" secondAttribute="bottom" id="rMe-0h-hma"/>
+                                <constraint firstItem="mwY-gG-HTN" firstAttribute="top" secondItem="hQI-cn-6t0" secondAttribute="top" id="ti1-lc-csi"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="zMe-Q5-GQi" secondAttribute="trailing" constant="20" id="3aS-54-UYk"/>
+                        <constraint firstItem="2k5-Ar-4U5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4St-m2-hwu" secondAttribute="leading" constant="20" id="Huf-XE-7YA"/>
+                        <constraint firstItem="2k5-Ar-4U5" firstAttribute="centerX" secondItem="4St-m2-hwu" secondAttribute="centerX" id="KhI-gm-6PC"/>
+                        <constraint firstItem="zMe-Q5-GQi" firstAttribute="leading" secondItem="4St-m2-hwu" secondAttribute="leading" constant="20" id="Uhp-xp-hS9"/>
+                        <constraint firstItem="zMe-Q5-GQi" firstAttribute="top" secondItem="2k5-Ar-4U5" secondAttribute="bottom" constant="15" id="WnY-fn-oBL"/>
+                        <constraint firstItem="hQI-cn-6t0" firstAttribute="centerX" secondItem="4St-m2-hwu" secondAttribute="centerX" id="aAM-dA-tVi"/>
+                        <constraint firstItem="hQI-cn-6t0" firstAttribute="top" secondItem="zMe-Q5-GQi" secondAttribute="bottom" constant="30" id="ePT-JJ-Rx3"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2k5-Ar-4U5" secondAttribute="trailing" constant="20" id="oMl-UO-gNw"/>
+                        <constraint firstAttribute="bottom" secondItem="hQI-cn-6t0" secondAttribute="bottom" constant="30" id="pFF-Cy-oS3"/>
+                        <constraint firstItem="2k5-Ar-4U5" firstAttribute="top" secondItem="4St-m2-hwu" secondAttribute="top" constant="15" id="sFy-mG-2Aj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="t6s-GU-2nE" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="FnJ-mr-u43"/>
+                <constraint firstItem="t6s-GU-2nE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LAB-oV-xYH"/>
+                <constraint firstItem="t6s-GU-2nE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VDR-aS-wNP"/>
+                <constraint firstItem="4St-m2-hwu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cbc-Zn-1As"/>
+                <constraint firstItem="4St-m2-hwu" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="poI-nc-SMv"/>
+                <constraint firstItem="t6s-GU-2nE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ssz-41-PEI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4St-m2-hwu" secondAttribute="trailing" constant="20" id="uR7-Ui-AKf"/>
+            </constraints>
+            <point key="canvasLocation" x="98" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
