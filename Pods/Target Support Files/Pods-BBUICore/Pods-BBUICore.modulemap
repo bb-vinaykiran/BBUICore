@@ -1,0 +1,6 @@
+framework module Pods_BBUICore {
+  umbrella header "Pods-BBUICore-umbrella.h"
+
+  export *
+  module * { export * }
+}
